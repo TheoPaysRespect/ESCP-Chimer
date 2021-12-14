@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>ESCP_ChimerPlayerColony</defName>
+		<label>Chimer arrivals</label>
+		<description>A colony of survivors from the Resdayn colonisation ship.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>ESCP_ChimerKind</basicMemberKind>
+		<pawnSingular>Chimer offworlder</pawnSingular>
+		<pawnsPlural>Chimer offworlders</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<backstoryFilters>
+		  <li>
+			<categories>
+			  <li>Offworld</li>
+			</categories>
+		  </li>
+		</backstoryFilters>
+		<factionIconPath>World/WorldObjects/Expanding/ESCP_ChimerSettlement</factionIconPath>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<allowedCultures>
+			<li>Astropolitan</li>
+			<li>ESCP_Chimeri</li>
+		</allowedCultures>
+		<geneticVariance>1</geneticVariance>
+		<startingResearchTags>
+		  <li>ClassicStart</li>
+		  <li>ESCP_ChimerStart_Industrial</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+		  <li>ClassicStart</li>
+		  <li>ClassicStartTechprints</li>
+		</startingTechprintsResearchTags>
+		<apparelStuffFilter>
+		  <thingDefs>
+			<li>Synthread</li>
+		  </thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+	
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>ESCP_ChimerPlayerTribe</defName>
+		<label>New Chimer Tribe</label>
+		<description>A small Chimer tribe.</description>
+		<isPlayer>true</isPlayer>
+		<pawnSingular>Chimer tribseman</pawnSingular>
+		<pawnsPlural>Chimer tribsepeople</pawnsPlural>
+		<basicMemberKind>ESCP_ChimerTribalKind</basicMemberKind>
+		<techLevel>Neolithic</techLevel>
+		<backstoryFilters>
+		  <li>
+			<categories>
+			  <li>Tribal</li>
+			</categories>
+		  </li>
+		</backstoryFilters>
+		<factionIconPath>World/WorldObjects/Expanding/ESCP_ChimerSettlement</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+		<allowedCultures>
+			<li>ESCP_Chimeri</li>
+		</allowedCultures>
+		<geneticVariance>1</geneticVariance>
+		<forageabilityFactor>1.7</forageabilityFactor>
+		<startingResearchTags>
+		  <li>TribalStart</li>
+		  <li>ESCP_ChimerStart_Tribal</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+		  <li>TribalStart</li>
+		  <li>TribalStartTechprints</li>
+		</startingTechprintsResearchTags>
+		<apparelStuffFilter>
+		  <thingDefs>
+			<li>Cloth</li>
+		  </thingDefs>
+		</apparelStuffFilter>
+		<recipePrerequisiteTags>
+		  <li>Tribal</li>
+		</recipePrerequisiteTags>
+	</FactionDef>
+	
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>ESCP_ChimerPlayerKingdom</defName>
+		<label>New Chimer Kingdom</label>
+		<description>A small Chimer kingdom.</description>
+		<isPlayer>true</isPlayer>
+		<pawnSingular>Chimer tribseman</pawnSingular>
+		<pawnsPlural>Chimer tribsepeople</pawnsPlural>
+		<basicMemberKind>ESCP_ChimerMedievalKind</basicMemberKind>
+		<techLevel>Medieval</techLevel>
+		<backstoryFilters>
+		  <li>
+			<categories>
+			  <li>Tribal</li>
+			</categories>
+		  </li>
+		</backstoryFilters>
+		<factionIconPath>World/WorldObjects/Expanding/ESCP_ChimerSettlement</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+		<allowedCultures>
+			<li>ESCP_Chimeri</li>
+		</allowedCultures>
+		<geneticVariance>1</geneticVariance>
+		<startingResearchTags>
+		  <li>TribalStart</li>
+		  <li>ESCP_ChimerStart_Medieval</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+		  <li>TribalStart</li>
+		  <li>TribalStartTechprints</li>
+		</startingTechprintsResearchTags>
+		<apparelStuffFilter>
+		  <thingDefs>
+			<li>Cloth</li>
+		  </thingDefs>
+		</apparelStuffFilter>
+		<recipePrerequisiteTags>
+		  <li>Tribal</li>
+		</recipePrerequisiteTags>
+	</FactionDef>
+
+</Defs>

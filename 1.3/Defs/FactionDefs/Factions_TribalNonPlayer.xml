@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Tribal -->
+
+  <FactionDef ParentName="ESCP_FactionBase" Name="ESCP_ChimerTribeBase" Abstract="True">
+	<modExtensions>
+		<li Class="ESCP_RaceTools.SettlementPreference">
+			<chance>0.9</chance>
+			<likedBiomeList>
+				<li>MorrowRim_Ashlands</li>
+				<li>MorrowRim_BlightedAshlands</li>
+				<li>MorrowRim_VolcanicAshlands</li>
+				<li>MorrowRim_AshSwamp</li>
+				<li>MorrowRim_Grazelands</li>
+			</likedBiomeList>
+			<onlyCoastal>true</onlyCoastal>
+			<IgnoreBiomeSelectionWeight>true</IgnoreBiomeSelectionWeight>
+        </li>
+	</modExtensions>
+    <leaderTitle>knight-chancellor</leaderTitle>
+    <factionIconPath>World/WorldObjects/Expanding/ESCP_ChimerSettlement</factionIconPath>
+    <factionNameMaker>ESCP_NamerFactionChimer</factionNameMaker>
+    <settlementNameMaker>ESCP_NamerSettlementChimerHouse</settlementNameMaker>
+    <allowedCultures>
+		<li>ESCP_Chimeri</li>
+	</allowedCultures>
+	<structureMemeWeights>
+	</structureMemeWeights>
+    <!-- Don't enable unless there are actually backstories -->
+		<!--
+		<backstoryFilters>
+		  <li>
+			<categories>
+			  <li>ESCP_Chimer_Tribal</li>
+			</categories>
+			<commonality>0.95</commonality>
+		  </li>
+		</backstoryFilters>
+		-->
+    <caravanTraderKinds Inherit="False">
+    </caravanTraderKinds>
+    <visitorTraderKinds Inherit="False">
+    </visitorTraderKinds>
+    <baseTraderKinds>
+    </baseTraderKinds>
+    <raidLootMaker>ESCP_ChimerTribeRaidLootMaker</raidLootMaker>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <ESCP_ChimerTribal_Penitent>5</ESCP_ChimerTribal_Penitent>
+          <ESCP_ChimerTribal_Warrior>5</ESCP_ChimerTribal_Warrior>
+          <ESCP_ChimerTribal_Archer>10</ESCP_ChimerTribal_Archer>
+          <ESCP_ChimerTribal_Hunter>10</ESCP_ChimerTribal_Hunter>
+          <ESCP_ChimerTribal_HeavyArcher>10</ESCP_ChimerTribal_HeavyArcher>
+          <ESCP_ChimerTribal_Berserker>5</ESCP_ChimerTribal_Berserker>
+          <ESCP_ChimerTribal_ChiefRanged>3</ESCP_ChimerTribal_ChiefRanged>
+          <ESCP_ChimerTribal_ChiefMelee>1.5</ESCP_ChimerTribal_ChiefMelee>
+	   </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <ESCP_ChimerTribal_Archer>10</ESCP_ChimerTribal_Archer>
+          <ESCP_ChimerTribal_Hunter>10</ESCP_ChimerTribal_Hunter>
+          <ESCP_ChimerTribal_HeavyArcher>10</ESCP_ChimerTribal_HeavyArcher>
+          <ESCP_ChimerTribal_ChiefRanged>5</ESCP_ChimerTribal_ChiefRanged>
+        </options>
+      </li>
+
+      <li>
+        <!-- Normal fights, melee only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <ESCP_ChimerTribal_Penitent>10</ESCP_ChimerTribal_Penitent>
+          <ESCP_ChimerTribal_Warrior>10</ESCP_ChimerTribal_Warrior>
+          <ESCP_ChimerTribal_Berserker>10</ESCP_ChimerTribal_Berserker>
+          <ESCP_ChimerTribal_ChiefMelee>5</ESCP_ChimerTribal_ChiefMelee>
+      </options>
+      </li>
+      <li>
+        <!-- breach-capable fights, breachers plus ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>5</commonality>
+        <options>
+          <ESCP_ChimerTribal_Breacher>5</ESCP_ChimerTribal_Breacher>
+          <ESCP_ChimerTribal_Penitent>5</ESCP_ChimerTribal_Penitent>
+          <ESCP_ChimerTribal_Warrior>5</ESCP_ChimerTribal_Warrior>
+          <ESCP_ChimerTribal_Archer>10</ESCP_ChimerTribal_Archer>
+          <ESCP_ChimerTribal_Hunter>10</ESCP_ChimerTribal_Hunter>
+          <ESCP_ChimerTribal_HeavyArcher>10</ESCP_ChimerTribal_HeavyArcher>
+          <ESCP_ChimerTribal_Berserker>5</ESCP_ChimerTribal_Berserker>
+          <ESCP_ChimerTribal_ChiefRanged>3</ESCP_ChimerTribal_ChiefRanged>
+          <ESCP_ChimerTribal_ChiefMelee>1.5</ESCP_ChimerTribal_ChiefMelee>
+      </options>
+      </li>
+      <li>
+        <!-- Peaceful -->
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <ESCP_ChimerTribal_Warrior>20</ESCP_ChimerTribal_Warrior>
+          <ESCP_ChimerTribal_Archer>10</ESCP_ChimerTribal_Archer>
+          <ESCP_ChimerTribal_Hunter>10</ESCP_ChimerTribal_Hunter>
+          <ESCP_ChimerTribal_HeavyArcher>10</ESCP_ChimerTribal_HeavyArcher>
+          <ESCP_ChimerTribal_Berserker>5</ESCP_ChimerTribal_Berserker>
+          <ESCP_ChimerTribal_ChiefRanged>3</ESCP_ChimerTribal_ChiefRanged>
+          <ESCP_ChimerTribal_ChiefMelee>1.5</ESCP_ChimerTribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <ESCP_ChimerTribal_Trader>1</ESCP_ChimerTribal_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2.5</Alpaca>
+          <Elephant>2</Elephant>
+        </carriers>
+        <guards>
+          <ESCP_ChimerTribal_Warrior>7</ESCP_ChimerTribal_Warrior>
+          <ESCP_ChimerTribal_Archer>10</ESCP_ChimerTribal_Archer>
+          <ESCP_ChimerTribal_Hunter>10</ESCP_ChimerTribal_Hunter>
+          <ESCP_ChimerTribal_HeavyArcher>10</ESCP_ChimerTribal_HeavyArcher>
+          <ESCP_ChimerTribal_Berserker>7</ESCP_ChimerTribal_Berserker>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <ESCP_ChimerTribal_Warrior>7</ESCP_ChimerTribal_Warrior>
+          <ESCP_ChimerTribal_Archer>10</ESCP_ChimerTribal_Archer>
+          <ESCP_ChimerTribal_Hunter>10</ESCP_ChimerTribal_Hunter>
+          <ESCP_ChimerTribal_HeavyArcher>10</ESCP_ChimerTribal_HeavyArcher>
+          <ESCP_ChimerTribal_Berserker>7</ESCP_ChimerTribal_Berserker>
+          <ESCP_ChimerTribal_ChiefRanged>10</ESCP_ChimerTribal_ChiefRanged>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement_RangedOnly</kindDef>
+        <options>
+          <ESCP_ChimerTribal_Archer>10</ESCP_ChimerTribal_Archer>
+          <ESCP_ChimerTribal_Hunter>10</ESCP_ChimerTribal_Hunter>
+          <ESCP_ChimerTribal_HeavyArcher>10</ESCP_ChimerTribal_HeavyArcher>
+          <ESCP_ChimerTribal_ChiefRanged>10</ESCP_ChimerTribal_ChiefRanged>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <ESCP_ChimerTribal_Miner>1</ESCP_ChimerTribal_Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <ESCP_ChimerTribal_Hunter>1</ESCP_ChimerTribal_Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <ESCP_ChimerTribal_Farmer>1</ESCP_ChimerTribal_Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+  </FactionDef>
+
+  <ThingSetMakerDef>
+    <defName>ESCP_ChimerTribeRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+            <li>Jade</li>
+            <li>MedicineHerbal</li>
+            <li>Pemmican</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+  
+  <FactionDef ParentName="ESCP_ChimerTribeBase">
+    <defName>ESCP_ChimerTribeCivil</defName>
+    <label>Chimer pilgrims</label>
+	<description>Once tribes of Aldmer, united by the prophet Veloth. The Chimer have settled new lands, erecting large Velothi towers.\n\nThe Chimer are generally welcoming, if not somewhat weary, of outsiders. The pilgirmage has been tough on them, so they don't have much to trade.</description>
+	<settlementGenerationWeight>0.5</settlementGenerationWeight>
+	<colorSpectrum>
+      <li>(0.65, 0.55, 0.25)</li>
+      <li>(0.75, 0.65, 0.55)</li>
+	  <li>(0.85, 0.75, 0.65)</li>
+    </colorSpectrum>
+	<requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+	</requiredMemes>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+    </disallowedMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">SlabBed_Preferred</li>
+    </disallowedPrecepts>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>40</configurationListOrderPriority>
+  </FactionDef>
+
+</Defs>
