@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="ESCP_BaseRace_MerStandardHead">
+		<defName>ESCP_ChimerRace</defName>
+		<label>Chimer</label>
+		<description>An elven race who set out on a great pilgrimage. The Chimer represent the earliest days of what will soon become Dunmer culture, and as such are comparatively un-refined.\n\nChimer are used to dealing with certain hardships due to their extensive pilgrimage. They don't mind sleeping on the ground, or eating without a table. And while they haven't gotten used to it yet, they can stomach consuming insect meat when it's cooked into a meal.\n\n&lt;color=#E5E54C&gt;Mer Blood&lt;/color&gt;\nPsychic sensitivity is increased by 20%\nFertility is decreased by 50%.\nBase health scale is decreased by 20%\nLife expectancy is increased to 300 years.\n\n&lt;color=#E5E54C&gt;Followers of Veloth&lt;/color&gt;\nMaximum comfortable temperature is increased by 4°C (39.2°F).\nGlobal learning factor is increased by 10%.\nCertainty loss factor is decreased by 20%.\nExpectations are decreased by one level.</description>
+		<descriptionHyperlinks>
+			<GeneDef MayRequire="Ludeon.RimWorld.Biotech">ESCP_GeneInheritedBonus_Mer</GeneDef>
+			<GeneDef MayRequire="Ludeon.RimWorld.Biotech">ESCP_GeneInheritedBonus_Chimer</GeneDef>
+		</descriptionHyperlinks>
+		<modExtensions>
+			<li Class="ESCP_RaceTools.RaceProperties">
+				<modifiedExpectations>true</modifiedExpectations>
+				<expectationOffset>-1</expectationOffset>
+				<majorRacialGeneToInherit MayRequire="Ludeon.RimWorld.Biotech">ESCP_GeneInheritedBonus_Mer</majorRacialGeneToInherit>
+				<minorRacialGeneToInherit MayRequire="Ludeon.RimWorld.Biotech">ESCP_GeneInheritedBonus_Chimer</minorRacialGeneToInherit>
+			</li>
+		</modExtensions>
+		<statBases>
+			<ComfyTemperatureMax>30</ComfyTemperatureMax>
+			<GlobalLearningFactor>1.1</GlobalLearningFactor>
+			<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.8</CertaintyLossFactor>
+		</statBases>
+		<race>
+			<leatherDef>ESCP_LeatherChimer</leatherDef>
+			<nameGenerator>ESCP_Chimer_NamerMale</nameGenerator>
+			<nameGeneratorFemale>ESCP_Chimer_NamerFemale</nameGeneratorFemale>
+		</race>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<!-- slightly greyer / darker gold -->
+									<li>
+										<weight>2</weight>
+										<only>(202,184,154,255)</only>
+									</li>
+									<li>
+										<weight>2</weight>
+										<only>(192,169,135,255)</only>
+									</li>
+									<li>
+										<weight>2</weight>
+										<only>(178,158,130,255)</only>
+									</li>
+									<li>
+										<weight>2</weight>
+										<only>(208,189,157,255)</only>
+									</li>
+									<!-- actual gold -->
+									<li>
+										<weight>10</weight>
+										<only>(246,207,140,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(247,218,159,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(245,235,190,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(239,199,132,255)</only>
+									</li>
+								</options>
+							</first>
+						</li>
+						<li>
+							<name>hair</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>1</weight>
+										<only>(100, 40, 40,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(40, 40, 40,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(30, 30, 30,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(20, 20, 20,255)</only>
+									</li>
+								</options>
+							</first>
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+				<!-- =====[Biotech backstory bullshit]===== -->
+				<newbornBackstoryFilter>
+					<li>
+						<categories>
+							<li>ESCP_GenericBiotechBackstory_Newborn</li>
+						</categories>
+						<commonality>1</commonality>
+					</li>
+				</newbornBackstoryFilter>
+				<childBackstoryFilter>
+					<li>
+						<categories>
+							<li>ESCP_GenericBiotechBackstory_Child</li>
+						</categories>
+						<commonality>1</commonality>
+					</li>
+				</childBackstoryFilter>
+				<adultBackstoryFilter>
+					<li>
+						<categories>
+							<li>ESCP_GenericBiotechBackstory_Adult</li>
+						</categories>
+						<commonality>1</commonality>
+					</li>
+				</adultBackstoryFilter>
+				<adultVatBackstoryFilter>
+					<li>
+						<categories>
+							<li>ESCP_GenericBiotechBackstory_VatGrown</li>
+						</categories>
+						<commonality>1</commonality>
+					</li>
+				</adultVatBackstoryFilter>
+			</generalSettings>
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+					<li>AteWithoutTable</li>
+					<li>AteInsectMeatAsIngredient</li>
+					<li>SleptOnGround</li>
+					<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_ateInsectEggAsIngredient</li>
+				</cannotReceiveThoughts>
+			</thoughtSettings>
+			<raceRestriction>
+				<buildingList>
+					<li MayRequire="SirMashedPotato.ESCP.Dunmer">ESCP_Dunmer_AshlanderMummy</li>
+				</buildingList>
+				<traitList>
+					<li MayRequire="SirMashedPotato.ESCP.Dunmer">ESCP_Dunmer_AlmalexiaBlessing</li>
+					<li MayRequire="SirMashedPotato.ESCP.Dunmer">ESCP_Dunmer_VivecBlessing</li>
+					<li MayRequire="SirMashedPotato.ESCP.Dunmer">ESCP_Dunmer_SothaSilBlessing</li>
+				</traitList>
+				<blackGeneList>
+					<li MayRequire="Ludeon.RimWorld.Biotech">ESCP_GeneInheritedBonus_Chimer</li>
+				</blackGeneList>
+			</raceRestriction>
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

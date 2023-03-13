@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[ESCP_Chimer_ChildhoodBase]========== -->
+	<AlienRace.AlienBackstoryDef Name="ESCP_Chimer_ChildhoodBase" Abstract="True" >
+		<slot>Childhood</slot>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<spawnCategories>
+			<li>ESCP_ChimerBackstory_Childhood</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	<!-- ==========[ESCP_Chimer_AdulthoodBase]========== -->
+	<AlienRace.AlienBackstoryDef Name="ESCP_Chimer_AdulthoodBase" Abstract="True" >
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ESCP_ChimerBackstory_Adulthood</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	<!-- ==========[ESCP_Chimer_AdulthoodBackstory_MageBase]========== -->
+	<AlienRace.AlienBackstoryDef ParentName="ESCP_GenericBackstoryAdulthood_MageBase" Name="ESCP_Chimer_AdulthoodBackstory_MageBase" Abstract="True">
+		<spawnCategories Inherit="False">
+			<li>ESCP_ChimerBackstory_Adulthood</li>
+			<li>ESCP_ChimerBackstory_AdulthoodMage</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+</Defs>
