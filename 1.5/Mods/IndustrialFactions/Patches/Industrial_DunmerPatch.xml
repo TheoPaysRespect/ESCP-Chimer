@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[@Name="ESCP_Industrial_ChimerNonPlayerFaction_CivilBase"]/structureMemeWeights</xpath>
+					<value>
+						<ESCP_Structure_OriginGoodDaedra MayRequire="SirMashedPotato.ESCP.Dunmer">15</ESCP_Structure_OriginGoodDaedra>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+

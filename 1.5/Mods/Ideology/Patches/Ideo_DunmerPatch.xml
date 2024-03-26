@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef[defName="ESCP_ChimerNonPlayerFaction_Civil"]/structureMemeWeights</xpath>
+		<value>
+			<ESCP_Structure_OriginGoodDaedra MayRequire="SirMashedPotato.ESCP.Dunmer">15</ESCP_Structure_OriginGoodDaedra>
+		</value>
+	</Operation>
+</Patch>
