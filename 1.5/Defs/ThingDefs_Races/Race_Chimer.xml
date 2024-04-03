@@ -135,8 +135,17 @@
 					<li>AteWithoutTable</li>
 					<li>AteInsectMeatAsIngredient</li>
 					<li>SleptOnGround</li>
-					<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_ateInsectEggAsIngredient</li>
+					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_AteInsectEggAsIngredient</li>
+					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_AteInsectEggDirect</li>
+					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_AteNixOxMilk</li>
+					<!--<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_AteRawMuck</li>-->
 				</cannotReceiveThoughts>
+				<replacerList>
+					<li MayRequire="sirmashedpotato.ashlands,sirmashedpotato.escp.dunmer">
+						<original>Mashed_Ashlands_AteScuttle</original>
+						<replacer>ESCP_DunmerAteScuttle</replacer>
+					</li>
+				</replacerList>
 			</thoughtSettings>
 			<raceRestriction>
 				<buildingList>
