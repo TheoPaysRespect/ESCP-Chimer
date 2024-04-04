@@ -6,24 +6,10 @@
 		<description>Once tribes of Aldmer, united by the prophet Veloth. The Chimer have settled new lands, erecting large Velothi towers.\n\nThe Chimer are generally welcoming, if not somewhat weary, of outsiders. The pilgrimage has been tough on them, so they don't have much to trade.</description>
 		<modExtensions>
 			<li Class="ESCP_RaceTools.SettlementPreference">
-				<chance>0.9</chance>
-				<likedBiomeList>
-					<li>Mashed_Ashlands_SwampAshlands</li>
-					<li>Mashed_Ashlands_GrazelandAshlands</li>
-					<li>Mashed_Ashlands_Ashlands</li>
-					<!--<li>Mashed_Ashlands_DustplainAshlands</li>-->
-
-					<li>Mashed_Ashlands_BlightedAshlands</li>
-					<!--<li>Mashed_Ashlands_BlightedBogAshlands</li>-->
-					
-					<li>Mashed_Ashlands_ForestAshlands</li>
-					<li>Mashed_Ashlands_MarshAshlands</li>
-					<li>Mashed_Ashlands_MeadowAshlands</li>
-
-					<li>Mashed_Ashlands_VolcanicAshlands</li>
-					<li>Mashed_Ashlands_VolcanicBadlandAshlands</li>
-					<li>Mashed_Ashlands_VolcanicSulphurPitsAshlands</li>					
-				</likedBiomeList>
+				<chance>1.0</chance>
+				<biomeKeyWords>
+					<li>Ashlands</li>
+				</biomeKeyWords>
 				<onlyCoastal>true</onlyCoastal>
 				<IgnoreBiomeSelectionWeight>true</IgnoreBiomeSelectionWeight>
 			</li>
