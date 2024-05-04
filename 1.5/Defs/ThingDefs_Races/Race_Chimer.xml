@@ -136,7 +136,6 @@
 					<li>AteInsectMeatAsIngredient</li>
 					<li>SleptOnGround</li>
 					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_AteInsectEggAsIngredient</li>
-					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_AteInsectEggDirect</li>
 				</cannotReceiveThoughts>
 				<replacerList>
 					<li MayRequire="sirmashedpotato.ashlands,sirmashedpotato.escp.dunmer">
