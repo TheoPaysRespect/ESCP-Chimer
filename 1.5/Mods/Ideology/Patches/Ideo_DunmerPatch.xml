@@ -3,7 +3,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/FactionDef[defName="ESCP_ChimerNonPlayerFaction_Civil"]/structureMemeWeights</xpath>
 		<value>
-			<ESCP_Structure_OriginGoodDaedra MayRequire="ESCP.ESCP.Dunmer">15</ESCP_Structure_OriginGoodDaedra>
+			<ESCP_Structure_OriginGoodDaedra MayRequire="ESCP.Dunmer">15</ESCP_Structure_OriginGoodDaedra>
 		</value>
 	</Operation>
 </Patch>

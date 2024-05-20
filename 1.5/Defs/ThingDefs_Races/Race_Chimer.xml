@@ -138,7 +138,7 @@
 					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_AteInsectEggAsIngredient</li>
 				</cannotReceiveThoughts>
 				<replacerList>
-					<li MayRequire="sirmashedpotato.ashlands,escp.escp.dunmer">
+					<li MayRequire="sirmashedpotato.ashlands,ESCP.dunmer">
 						<original>Mashed_Ashlands_AteScuttle</original>
 						<replacer>ESCP_DunmerAteScuttle</replacer>
 					</li>
@@ -146,12 +146,12 @@
 			</thoughtSettings>
 			<raceRestriction>
 				<buildingList>
-					<li MayRequire="ESCP.ESCP.Dunmer">ESCP_Dunmer_AshlanderMummy</li>
+					<li MayRequire="ESCP.Dunmer">ESCP_Dunmer_AshlanderMummy</li>
 				</buildingList>
 				<traitList>
-					<li MayRequire="ESCP.ESCP.Dunmer">ESCP_Dunmer_AlmalexiaBlessing</li>
-					<li MayRequire="ESCP.ESCP.Dunmer">ESCP_Dunmer_VivecBlessing</li>
-					<li MayRequire="ESCP.ESCP.Dunmer">ESCP_Dunmer_SothaSilBlessing</li>
+					<li MayRequire="ESCP.Dunmer">ESCP_Dunmer_AlmalexiaBlessing</li>
+					<li MayRequire="ESCP.Dunmer">ESCP_Dunmer_VivecBlessing</li>
+					<li MayRequire="ESCP.Dunmer">ESCP_Dunmer_SothaSilBlessing</li>
 				</traitList>
 				<blackGeneList>
 					<li MayRequire="Ludeon.RimWorld.Biotech">ESCP_GeneInheritedBonus_Chimer</li>
