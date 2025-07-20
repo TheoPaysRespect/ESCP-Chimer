@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<StyleCategoryDef>
+		<defName>ESCP_ChimerStyle</defName>
+		<label>Chimeri</label>
+		<iconPath>World/WorldObjects/Expanding/ESCP_ChimerSettlement</iconPath>
+		<soundOngoingRitual>RitualSustainer_Morbid</soundOngoingRitual>
+		<ritualVisualEffectDef>ESCP_ChimerRitualStyle</ritualVisualEffectDef>
+		<thingDefStyles>
+			<!-- Don't remove this, it breaks world gen -->
+		</thingDefStyles>
+	</StyleCategoryDef>
+</Defs>
